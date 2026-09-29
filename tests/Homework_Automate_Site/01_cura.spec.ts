@@ -6,6 +6,9 @@ test('verify cura page is loaded',async({page})=>{
     let userName = await page.locator("#txt-username").fill("John Doe");
     let password=await page.locator("#txt-password").fill("ThisIsNotAPassword");
     let loginButton = await page.locator("#btn-login").click();
+    
+    //wait applied for  Make Appointment appears
+    //await page.waitForTimeout(5000);
 
     // await makeAppointmentButton.click();
     // await userName.fill("John Doe");
